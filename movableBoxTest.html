@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>MovableBox Class Test</title>
+    <script language="javascript" src="movableBox.js"></script>
+    <script language="javascript">
+
+        var table = null;
+        count = 0;
+
+        function init()
+        {
+            var box1 = new MovableBox.init("box1", "Test Carlos<br>Here's a good content!", 100, 100, 250, 40, "#FF0000", "divDebug");
+            var box2 = new MovableBox.init("box2", "Test 2 <br>Here's another good content!", 100, 400, 200, 90, "#FFFF00", "divDebug");
+            var box3 = new MovableBox.init("box3", "Test 3 <br>Here's another good content!", 100, 700, 200, 40, "#00FF00", "divDebug");
+
+			table = new MovableBoxTable();
+			table.addBox(box1);
+			table.addBox(box2);
+			table.addBox(box3);
+			table.showAllBoxes();
+        }
+
+        window.onload = init;
+
+    </script>
+</head>
+<body>
+<h2>MovableBox Class Test</h2>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div id="divDebug"></div>
+</body>
+</html>
